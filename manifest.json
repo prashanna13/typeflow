@@ -1,0 +1,20 @@
+{
+  "name": "TypeFlow",
+  "short_name": "TypeFlow",
+  "description": "Learn touch typing from the beginning with free guided lessons, interactive keyboard training, typing tests, games and progress tracking.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0B0D10",
+  "theme_color": "#7C5CFF",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "utilities"],
+  "orientation": "any"
+}

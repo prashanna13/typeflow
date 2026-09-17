@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Today's Practice — TypeFlow</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <main id="main" class="wrap section" style="padding-top:36px">
+    <p class="kicker">Daily routine</p>
+    <h1 class="section-h">Today's practice</h1>
+    <p class="section-p">A short, structured session: warm up, fix weak spots, finish with a speed test. Ten minutes.</p>
+    <div class="lesson-list" id="steps"></div>
+    <section id="live" hidden>
+      <p class="kicker" id="step-title">Step</p>
+      <div class="progress-bar" style="margin-bottom:12px"><i></i></div>
+      <div class="prompt" id="prompt"></div>
+      <p class="tiny muted" style="margin-top:8px"><b id="d-time">00:00</b> elapsed</p>
+      <div class="kb-wrap" style="margin-top:16px"><div id="kb"></div></div>
+    </section>
+  </main>
+  <script type="module" src="js/daily.js"></script>
+</body>
+</html>

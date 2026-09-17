@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Practice — TypeFlow</title>
+  <meta name="description" content="Guided TypeFlow lesson with live WPM, accuracy, and an interactive keyboard.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <main id="main" class="wrap lesson-shell">
+    <div>
+      <p class="kicker" id="lesson-kicker">Lesson</p>
+      <h1 id="lesson-title">Lesson</h1>
+      <p class="muted" id="lesson-pos"></p>
+      <p class="mobile-note">For the best typing experience, use a physical keyboard. Phone screens teach tap habits, not touch typing.</p>
+
+      <section id="guide" hidden>
+        <div class="card">
+          <p id="guide-body"></p>
+          <ol id="guide-steps"></ol>
+          <button class="btn btn-primary" id="complete-guide" type="button">Mark complete and continue</button>
+        </div>
+      </section>
+
+      <section id="drill">
+        <p class="muted" id="intro"></p>
+        <p class="tiny" id="hint" role="status"></p>
+        <div class="progress-bar" aria-hidden="true"><i></i></div>
+        <div class="prompt" id="prompt" aria-live="polite"></div>
+        <div class="lesson-nav">
+          <a class="btn btn-ghost" id="prev" href="lessons.html">Previous</a>
+          <button class="btn btn-ghost" id="restart" type="button">Restart</button>
+          <a class="btn btn-primary" id="next" href="lessons.html">Next lesson</a>
+        </div>
+      </section>
+
+      <section id="done" class="card complete-card" hidden>
+        <p class="kicker">Lesson complete</p>
+        <h2>Well done.</h2>
+        <p id="d-msg">Great work. Accuracy is building your muscle memory.</p>
+        <div class="metrics" style="margin:18px 0">
+          <div class="metric"><b id="d-wpm">0</b><span>WPM</span></div>
+          <div class="metric"><b id="d-acc">0%</b><span>Accuracy</span></div>
+          <div class="metric"><b id="d-err">0</b><span>Errors</span></div>
+          <div class="metric"><b id="d-time">00:00</b><span>Time</span></div>
+        </div>
+        <div class="hero-actions" style="justify-content:center">
+          <button class="btn btn-ghost" id="again" type="button">Practice again</button>
+          <a class="btn btn-primary" id="done-next" href="lessons.html">Next lesson</a>
+          <a class="btn btn-soft" href="lessons.html">Continue learning</a>
+        </div>
+      </section>
+
+      <div class="kb-wrap" style="margin-top:22px">
+        <div id="kb"></div>
+        <div id="hands"></div>
+      </div>
+    </div>
+    <aside class="side-panel">
+      <div class="metric"><b id="m-wpm">0</b><span>WPM</span></div>
+      <div class="metric"><b id="m-acc">100%</b><span>Accuracy</span></div>
+      <div class="metric"><b id="m-err">0</b><span>Errors</span></div>
+      <div class="metric"><b id="m-ok">0</b><span>Correct</span></div>
+      <div class="metric"><b id="m-time">00:00</b><span>Time</span></div>
+      <p class="tiny muted">WPM uses correctly typed characters ÷ 5 ÷ minutes. Slow is allowed.</p>
+    </aside>
+  </main>
+  <script type="module" src="js/trainer.js"></script>
+</body>
+</html>

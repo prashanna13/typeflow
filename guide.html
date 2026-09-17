@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Finger Guide — TypeFlow</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <main id="main" class="wrap section" style="padding-top:36px">
+    <p class="kicker">Interactive guide</p>
+    <h1 class="section-h">Which finger should I use?</h1>
+    <p class="section-p">Hover or click any key. The finger lights up. F and J have bumps so you can find them in the dark.</p>
+    <div class="grid-2">
+      <div class="kb-wrap">
+        <div id="kb"></div>
+        <div id="hands"></div>
+        <div class="finger-legend">
+          <span class="chip"><i class="dot" style="background:var(--finger-lp)"></i>Left pinky</span>
+          <span class="chip"><i class="dot" style="background:var(--finger-lr)"></i>Left ring</span>
+          <span class="chip"><i class="dot" style="background:var(--finger-lm)"></i>Left middle</span>
+          <span class="chip"><i class="dot" style="background:var(--finger-li)"></i>Left index</span>
+          <span class="chip"><i class="dot" style="background:var(--finger-ri)"></i>Right index</span>
+          <span class="chip"><i class="dot" style="background:var(--finger-rm)"></i>Right middle</span>
+          <span class="chip"><i class="dot" style="background:var(--finger-rr)"></i>Right ring</span>
+          <span class="chip"><i class="dot" style="background:var(--finger-rp)"></i>Right pinky</span>
+        </div>
+      </div>
+      <div class="card guide-panel" id="panel"></div>
+    </div>
+  </main>
+  <script type="module" src="js/guide.js"></script>
+</body>
+</html>

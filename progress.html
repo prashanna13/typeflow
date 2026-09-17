@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Progress — TypeFlow</title>
+  <meta name="description" content="Your TypeFlow stats, heatmap, achievements, export and import.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <main id="main" class="wrap section" style="padding-top:36px">
+    <p class="kicker">This browser only</p>
+    <h1 class="section-h">Progress</h1>
+    <p class="section-p">Stored locally. Export a backup if you switch machines.</p>
+    <div class="progress-bar" style="margin-bottom:18px"><i data-fill></i></div>
+    <div class="metrics">
+      <div class="metric"><b id="p-complete">0%</b><span>Overall</span></div>
+      <div class="metric"><b id="p-lessons">0</b><span>Lessons</span></div>
+      <div class="metric"><b id="p-level">—</b><span>Current level</span></div>
+      <div class="metric"><b id="p-streak">0</b><span>Streak</span></div>
+      <div class="metric"><b id="p-best">0</b><span>Best WPM</span></div>
+      <div class="metric"><b id="p-avg">0</b><span>Average WPM</span></div>
+      <div class="metric"><b id="p-acc">0%</b><span>Accuracy</span></div>
+      <div class="metric"><b id="p-time">00:00</b><span>Practice time</span></div>
+      <div class="metric"><b id="p-chars">0</b><span>Characters</span></div>
+    </div>
+
+    <div class="hero-actions" style="margin:22px 0">
+      <button class="btn btn-primary" data-export type="button">Download my progress</button>
+      <label class="btn btn-ghost">Import progress<input data-import type="file" accept="application/json" class="sr-only"></label>
+      <button class="btn btn-danger" data-reset type="button">Reset all progress</button>
+    </div>
+
+    <div class="grid-2" style="margin:28px 0">
+      <div class="card">
+        <h3>Weakest keys</h3>
+        <ul id="weak-keys"></ul>
+        <a class="btn btn-soft" href="weak.html">Practice my weak keys</a>
+      </div>
+      <div class="card">
+        <h3>Most accurate keys</h3>
+        <ul id="strong-keys"></ul>
+      </div>
+    </div>
+
+    <h2 class="section-h" style="font-size:28px">Keyboard heatmap</h2>
+    <p class="heatmap-note">Greener keys are cleaner. Redder keys need more time. Color is not the only cue — percentages sit in the lists above.</p>
+    <div class="kb-wrap"><div id="heat"></div></div>
+
+    <h2 class="section-h" style="font-size:28px;margin-top:36px">Achievements</h2>
+    <div class="grid-2" id="achievements"></div>
+
+    <h2 class="section-h" style="font-size:28px;margin-top:36px">Recent tests</h2>
+    <table class="table">
+      <thead><tr><th>When</th><th>WPM</th><th>Accuracy</th><th>Kind</th><th>Length</th></tr></thead>
+      <tbody id="sessions"></tbody>
+    </table>
+  </main>
+  <script type="module" src="js/progress.js"></script>
+</body>
+</html>

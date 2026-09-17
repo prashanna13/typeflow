@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Games — TypeFlow</title>
+  <meta name="description" content="Free typing games: Falling Keys, Word Sprint, Accuracy Challenge, Key Hunter, and Keyboard Defender.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <main id="main" class="wrap section" style="padding-top:36px">
+    <p class="kicker">Play</p>
+    <h1 class="section-h">Five small games. Same keyboard skills.</h1>
+    <p class="section-p">No accounts. Scores stay in this browser. Use a physical keyboard.</p>
+    <div class="tabs">
+      <button class="tab on" data-game="falling" type="button">Falling Keys</button>
+      <button class="tab" data-game="sprint" type="button">Word Sprint</button>
+      <button class="tab" data-game="accuracy" type="button">Accuracy Challenge</button>
+      <button class="tab" data-game="hunter" type="button">Key Hunter</button>
+      <button class="tab" data-game="defender" type="button">Keyboard Defender</button>
+    </div>
+    <div class="metrics" style="margin-bottom:12px">
+      <div class="metric"><b id="g-score">0</b><span>Score</span></div>
+      <div class="metric"><b id="g-lives">0</b><span>Lives</span></div>
+      <div class="metric"><b id="g-status">Pick a game</b><span>Status</span></div>
+    </div>
+    <div class="game-stage" id="stage"></div>
+  </main>
+  <script type="module" src="js/games.js"></script>
+</body>
+</html>

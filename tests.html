@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Typing Test — TypeFlow</title>
+  <meta name="description" content="Free typing tests from 15 seconds to 10 minutes. Words, sentences, programming, numbers, and punctuation.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <main id="main" class="wrap section" style="padding-top:36px">
+    <p class="kicker">Measure, don't guess</p>
+    <h1 class="section-h">Typing test</h1>
+    <p class="section-p">WPM is correctly typed characters divided by five, divided by minutes. No inflated scores.</p>
+    <p class="mobile-note">Use a physical keyboard for a meaningful result.</p>
+
+    <section id="setup">
+      <p class="tiny muted">Duration</p>
+      <div class="tabs">
+        <button class="tab" data-group="time" data-value="15" type="button">15s</button>
+        <button class="tab" data-group="time" data-value="30" type="button">30s</button>
+        <button class="tab on" data-group="time" data-value="60" type="button" aria-selected="true">1 min</button>
+        <button class="tab" data-group="time" data-value="180" type="button">3 min</button>
+        <button class="tab" data-group="time" data-value="300" type="button">5 min</button>
+        <button class="tab" data-group="time" data-value="600" type="button">10 min</button>
+      </div>
+      <p class="tiny muted">Category</p>
+      <div class="tabs">
+        <button class="tab on" data-group="kind" data-value="words" type="button" aria-selected="true">Random words</button>
+        <button class="tab" data-group="kind" data-value="words" type="button">Common English</button>
+        <button class="tab" data-group="kind" data-value="sentences" type="button">Sentences</button>
+        <button class="tab" data-group="kind" data-value="paragraph" type="button">Paragraph</button>
+        <button class="tab" data-group="kind" data-value="programming" type="button">Programming</button>
+        <button class="tab" data-group="kind" data-value="numbers" type="button">Numbers</button>
+        <button class="tab" data-group="kind" data-value="punctuation" type="button">Punctuation</button>
+      </div>
+      <button class="btn btn-primary" id="start" type="button">Start test</button>
+    </section>
+
+    <section id="live" hidden>
+      <div class="metrics" style="margin-bottom:12px">
+        <div class="metric"><b id="t-wpm">0</b><span>WPM</span></div>
+        <div class="metric"><b id="t-acc">100%</b><span>Accuracy</span></div>
+        <div class="metric"><b id="t-time">01:00</b><span>Time left</span></div>
+      </div>
+      <div class="prompt" id="prompt"></div>
+      <div class="kb-wrap" style="margin-top:16px"><div id="kb"></div></div>
+    </section>
+
+    <section id="result" class="card complete-card" hidden>
+      <h2>Result</h2>
+      <div class="metrics">
+        <div class="metric"><b id="r-wpm">0</b><span>WPM</span></div>
+        <div class="metric"><b id="r-acc">0%</b><span>Accuracy</span></div>
+        <div class="metric"><b id="r-err">0</b><span>Errors</span></div>
+        <div class="metric"><b id="r-ok">0</b><span>Correct</span></div>
+        <div class="metric"><b id="r-bad">0</b><span>Incorrect</span></div>
+        <div class="metric"><b id="r-con">—</b><span>Consistency</span></div>
+      </div>
+      <div class="hero-actions" style="justify-content:center;margin-top:16px">
+        <button class="btn btn-primary" id="again" type="button">Run another test</button>
+        <a class="btn btn-ghost" href="weak.html">Practice weak keys</a>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="js/tests.js"></script>
+</body>
+</html>
